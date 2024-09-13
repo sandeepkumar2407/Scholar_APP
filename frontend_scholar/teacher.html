@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Welcome, Teacher!</h2>
+        <div id="teacher-info">
+            <p><strong>ID:</strong> <span id="teacher-id"></span></p>
+            <p><strong>Name:</strong> <span id="teacher-name"></span></p>
+        </div>
+
+        <h2>Create Assignment</h2>
+        <!-- Form for creating assignments -->
+        <form id="create-assignment-form">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br>
+            <label for="file-link">File Link:</label>
+            <input type="text" id="file-link" name="file-link"><br>
+            <label for="submission-link">Submission Link:</label>
+            <input type="text" id="submission-link" name="submission-link"><br>
+            <label for="section">Section:</label>
+            <input type="text" id="section" name="section"><br>
+            <label for="deadline">Deadline:</label>
+            <input type="date" id="deadline" name="deadline"><br>
+            <button type="submit">Create Assignment</button>
+        </form>
+    </div>
+    <!-- Add this section after the create assignment form -->
+    <div id="assignments">
+        <h2>Assignments</h2>
+        <button onclick="viewAssignments()">View Assignments</button>
+        <div id="assignment-details"></div>
+    </div>
+    <!-- Add this section after the create assignment form -->
+    <div id="view-submissions">
+        <h2>View Submissions</h2>
+        <label for="assignment-id">Assignment ID:</label>
+        <input type="text" id="assignment-id">
+        <button onclick="viewSubmissions()">View Submissions</button>
+        <div id="submission-details"></div>
+    </div>
+    <div id="result-list-section">
+        <h2>Create or Update Result List</h2>
+        <label for="result-assignment-id">Assignment ID:</label>
+        <input type="text" id="result-assignment-id" name="result-assignment-id"><br>
+        <label for="student-id">Student ID:</label>
+        <input type="text" id="student-id" name="student-id"><br>
+        <label for="score">Score:</label>
+        <input type="number" id="score" name="score" min="0"><br>
+        <button onclick="createOrUpdateResultList()">Create/Update Result List</button>
+    </div>
+    <div id="view-result-list">
+        <h2>View Results</h2>
+        <button onclick="viewResultList()">View Result List</button>
+        <div id="result-list-details"></div>
+    </div>
+
+    <!-- Include the JavaScript file -->
+    <script src="teacherscript.js"></script>
+</body>
+
+</html>

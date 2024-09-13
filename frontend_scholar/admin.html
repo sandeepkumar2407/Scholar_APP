@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Welcome to Admin Dashboard</h1>
+
+    <!-- Create Teacher Section -->
+    <h2>Create Teacher</h2>
+    <label for="teacherName">Teacher Name:</label>
+    <input type="text" id="teacherName" placeholder="Enter teacher name">
+    <label for="teacherPassword">Teacher Password:</label>
+    <input type="password" id="teacherPassword" placeholder="Enter teacher password">
+    <button onclick="createTeacher()">Create Teacher</button>
+
+    <!-- Create Student Section -->
+    <h2>Create Student</h2>
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" placeholder="Enter student name">
+    <label for="studentSection">Student Section:</label>
+    <input type="text" id="studentSection" placeholder="Enter student section">
+    <label for="studentPassword">Student Password:</label>
+    <input type="password" id="studentPassword" placeholder="Enter student password">
+    <button onclick="createStudent()">Create Student</button>
+
+    <!-- View Teacher Section -->
+    <h2>View Teacher Details</h2>
+    <button onclick="viewTeachers()">View Teachers</button>
+    <div id="teacherDetails"></div>
+
+    <!-- View Student Section -->
+    <h2>View Student Details</h2>
+    <button onclick="viewStudents()">View Students</button>
+    <div id="studentDetails"></div>
+
+    <!-- Delete Teacher Section -->
+    <h2>Delete Teacher</h2>
+    <label for="teacherId">Teacher ID:</label>
+    <input type="number" id="teacherId" placeholder="Enter teacher ID">
+    <button onclick="deleteTeacher()">Delete Teacher</button>
+
+    <!-- Delete Student Section -->
+    <h2>Delete Student</h2>
+    <label for="studentId">Student ID:</label>
+    <input type="number" id="studentId" placeholder="Enter student ID">
+    <button onclick="deleteStudent()">Delete Student</button>
+
+    <script src="adminscript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Welcome to Student Dashboard</h1>
+
+    <!-- Display Student ID, Name, and Section -->
+    <h2>Student Information</h2>
+    <p>Student ID: <span id="student-id"></span></p>
+    <p>Student Name: <span id="student-name"></span></p>
+
+    <!-- View Assignments Section -->
+    <h2>View Assignments</h2>
+    <button onclick="viewAssignments()">View Assignments</button>
+    <div id="assignments"></div>
+
+    <!-- Create Submission Section -->
+    <h2>Create Submission</h2>
+    <label for="assignment-id">Assignment ID:</label>
+    <input type="text" id="assignment-id">
+    <label for="submission-file-link">Submission File Link:</label>
+    <input type="text" id="submission-file-link">
+    <button onclick="createSubmission()">Submit</button>
+
+    <h2>View Your Results</h2>
+    <div id="student-result-container"></div>
+    <button onclick="viewStudentResults()">View Results</button>
+
+
+    <script src="studentscript.js"></script>
+</body>
+
+</html>
